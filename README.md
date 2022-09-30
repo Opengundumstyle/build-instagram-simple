@@ -10,7 +10,7 @@ Implement the Instagram class:
  - `folllow(followerId, followeeId)` The user with ID `followerId` starts following the user with ID `followeeId`.
  - `unfollow(followerId, followeeId)` The user with ID `followerId` starts unfollowing the user with ID `followeeId`.
  
- In order to receive full credit, you must comment each function with a space and time complexity analysis with your variables defined.
+ In order to receive full credit, you must comment each function with a space and time complexity analysis with your variables defined. You may add any helper functions that you feel like would be useful.
 
 ## **Example:**
 

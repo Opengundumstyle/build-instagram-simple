@@ -9,6 +9,8 @@ Implement the Instagram class:
  - `getFeed(userId)` retrieves the `10` most recent photo IDs in the user's feed. Each item in the feed must be posted by users who the user followed or by the user themself. Photos must be **ordered from the most recent to least recent**.
  - `folllow(followerId, followeeId)` The user with ID `followerId` starts following the user with ID `followeeId`.
  - `unfollow(followerId, followeeId)` The user with ID `followerId` starts unfollowing the user with ID `followeeId`.
+ 
+ In order to receive full credit, you must comment each function with a space and time complexity analysis with your variables defined.
 
 ## **Example:**
 

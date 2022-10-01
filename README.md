@@ -26,7 +26,7 @@ The first list lists the functions to invoke. The second list lists the argument
 **Explanation:**
 
 ```
-Instagram instagram = new Instagram();
+const instagram = new Instagram();
 // Create an instance of Instagram.
 
 instagram.postPhoto(1, 5); 

@@ -8,14 +8,14 @@ class Instagram {
         this.pastfeeds = {};
     }
 
-    postPhoto(userId, photoId) {
+    postPhoto(userId, photoId) {     // time complexity: O(n)     space complexity:O(n^2)
         // Write code here...
-        if( this.photos[userId]){
-             this.photos[userId].unshift(photoId)
-             this.livefeeds[userId].unshift(photoId)
-        if(this.following[userId]){
-             for( let i = 0; i < this.following[userId].length;i++){
-                  let currentId = this.following[i]
+        if( this.photos[userId]){  
+             this.photos[userId].unshift(photoId) 
+             this.livefeeds[userId].unshift(photoId) 
+        if(this.following[userId]){ 
+             for( let i = 0; i < this.following[userId].length;i++){ //o(n)
+                  let currentId = this.following[i] 
                   this.livefeeds[currentId].unshift(photoId)
                   if(this.livefeeds[currentId].length > 10) {
                        this.livefeeds[currentId].pop()
@@ -30,7 +30,7 @@ class Instagram {
         return null
     }
 
-    getFeed(userId) {
+    getFeed(userId) {     // time complexity: O(1)     space complexity:O(10)
         // Write code here...
        let feeds = this.livefeeds[userId]
        while(feeds.length < 10 && this.pastfeeds[userId] !== undefined && this.pastfeeds[userId].length!== 0){
@@ -39,7 +39,7 @@ class Instagram {
        return feeds
     }
 
-    follow(followerId, followeeId) {
+    follow(followerId, followeeId) {  // time complexity: O(n)     space complexity:O(n)
         // Write code here..
         if(this.following[followeeId]){
 
@@ -58,7 +58,7 @@ class Instagram {
             return null
       }
 
-    unfollow(followerId, followeeId) {
+    unfollow(followerId, followeeId) { //time complexity:  O(n^2)   space complexity: O(n)
         // Write code here..
        let followeePhotoIdArr = this.photos[followeeId]
        let newlivefeeds = []
